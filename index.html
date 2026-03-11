@@ -208,6 +208,38 @@
 
     .nav-logo {
       display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-images {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .nav-logo-img:last-child {
+      margin-left: -10px;
+    }
+
+    .nav-logo-img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 15px rgba(201, 168, 76, 0.4);
+      z-index: 2;
+      position: relative;
+    }
+
+    .nav-logo-text {
+      display: flex;
       flex-direction: column;
     }
 
@@ -1565,8 +1597,14 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <div class="nav-logo">
-        <span class="nav-logo-name">R.R Multispeciality</span>
-        <span class="nav-logo-sub">Dental Clinics · Chennai</span>
+        <div class="nav-logo-images">
+          <img src="images/rr image 3.jpg" alt="R.R Dental Clinic" class="nav-logo-img">
+          <img src="images/rr image 6.jpg" alt="Dr. Riaz" class="nav-logo-img">
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">R.R Multispeciality</span>
+          <span class="nav-logo-sub">Dental Clinics · Chennai</span>
+        </div>
       </div>
       <div class="nav-links" id="navLinks">
         <a href="#services">Services</a>
